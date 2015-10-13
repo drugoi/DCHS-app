@@ -1,0 +1,15 @@
+<ion-view title="Статьи">
+  <ion-content class="padding">
+  	<div class="article">
+	  	<div id="{{category.id}}" ng-repeat="category in articlesCats">
+		  	<div class="item item-divider special-divider">{{category.title}}</div>
+		  	<div class="list article-list" ng-controller="ArticlesCategoryCtrl" ng-init="init(category.id)">
+			  	<a ng-repeat="item in getCategory(category.id) | articles:itemStart:itemEnd" href="#/articles/{{item.category_id}}/{{item.id}}" class="item item-avatar item-article">
+				  		<img src="http://sos-dchs.kz{{item.icon}}" alt="{{item.title}}" /> {{item.title}}
+				  </a>
+				  <span class="item item-more" ng-if="showMore" ng-click="getAllArticles(getCategory(category.id).length, category.id)">Ещё…</span>
+		  	</div>
+	  	</div>
+  	</div>
+  </ion-content>
+</ion-view>

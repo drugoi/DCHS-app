@@ -1,0 +1,13 @@
+<ion-view title="Новости">
+  <ion-content class="padding">
+     <div class="item item-divider special-divider">
+        Последние новости
+      </div>
+      <div class="list news-list">
+	      <div ng-repeat="newsItem in news" id="{{newsItem.id}}">
+					<a href="#/news/{{newsItem.id}}" class="item item-news">{{newsItem.title}}</a>
+					<div class="item item-divider news-divider">{{newsItem.date}}</div>
+		     </div>
+      </div>
+  </ion-content>
+</ion-view>

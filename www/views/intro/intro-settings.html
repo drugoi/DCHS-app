@@ -1,0 +1,25 @@
+<style>
+	.bar-stable {
+		display: none !important;
+	}
+</style>
+<div class="bar bar-header" style="background: #FFF; border-color: #FFF;">&nbsp;</div>
+<ion-view title="Настройки приложения" animation="no-animation">
+  <ion-content class="padding">
+  	<div class="list">
+  		<div class="item item-divider slider-divider">Добавьте контакты кому будет отправлено сообщение о помощи в случае ЧС</div>
+      <ul class="list slider__contacts">
+	      <li ng-repeat="phone in phones" class="item" ng-click="removeContact($index)">
+					{{phone.name}} <i class="icon-right ion-ios-close-outline"></i>
+				</li>
+      </ul>
+      <div ng-if="phonesCount < 3" class="slider__contact-add" ng-click="addContact()">
+        <i class="icon-left ion-ios-plus-outline"></i> Добавить контакт
+      </div>
+      <br /><br />
+  		<div class="item item-divider slider-divider">Текст SMS сообщения</div>
+  		<textarea placeholder="{{sos__placeholder}}" class="slider__message" ng-model="sosMessage" ng-blur="saveMessage(sosMessage)"></textarea>
+  	</div>
+		<a href="#/tab/sos" class="button slider__button finish__button" ng-click="saveIntro()">Готово</a>
+  </ion-content>
+</ion-view>

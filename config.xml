@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.ionicframework.dchs691113" version="0.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>ДЧС Алматы</name>
+  <description>DCHS Almaty App</description>
+  <author email="litvinova.nuriya@gmail" href="http://dchs-almaty.kz/"></author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <access origin="tel:*" launch-external="yes" />
+  <access origin="mailto:*" launch-external="yes" />
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="Orientation" value="portrait" />
+	<platform name="android">
+		<icon src="res/android/drawable-mdpi/ic_launcher.png" density="mdpi" />
+		<icon src="res/android/drawable-hdpi/ic_launcher.png" density="hdpi" />
+		<icon src="res/android/drawable-xhdpi/ic_launcher.png" density="xhdpi" />
+		<icon src="res/android/drawable-xxhdpi/ic_launcher.png" density="xxhdpi" />
+	</platform>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+</widget>

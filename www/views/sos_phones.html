@@ -1,0 +1,14 @@
+<div class="bar bar-header bar-dark" ng-controller="TabController">
+	<button ng-click="goBack();" class="button icon-left button-small ion-chevron-left button-clear button-white"></button>
+	<div class="h1 title">ЭКСТРЕННЫЕ ВЫЗОВЫ</div>
+	<a href="#/settings" class="button button-icon icon ion-ios-gear-outline settings__button"></a>
+</div>
+<ion-view title="Экстренные вызовы">
+  <ion-content class="padding">
+    <div>
+      <a ng-repeat="phone in phones" href="tel:{{phone.number}}" class="button button-block button-light button-phone">
+        <i class="icon ion-android-call"></i> <strong>{{phone.number}}</strong> &nbsp;&nbsp; {{phone.title}}
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
